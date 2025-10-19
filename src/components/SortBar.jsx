@@ -1,29 +1,11 @@
-function SortBar({ onSort, onFilter, classes }) {
-  return (
-    <div className="sort-bar flex gap-4 mb-4">
-      {/* Filter by class */}
-      <select
-        onChange={(e) => onFilter(e.target.value)}
-        className="border px-2 py-1 rounded"
-      >
-        <option value="">All Classes</option>
-        {classes.map((c) => (
-          <option key={c} value={c}>
-            {c}
-          </option>
-        ))}
-      </select>
+import React from "react";
 
-      {/* Sort by stat */}
-      <select
-        onChange={(e) => onSort(e.target.value)}
-        className="border px-2 py-1 rounded"
-      >
-        <option value="">Sort By</option>
-        <option value="health">Health</option>
-        <option value="damage">Damage</option>
-        <option value="armor">Armor</option>
-      </select>
+function SortBar({ setSortType }) {
+  return (
+    <div className="sort-bar">
+      <button onClick={() => setSortType("health")}>Sort by Health</button>
+      <button onClick={() => setSortType("damage")}>Sort by Damage</button>
+      <button onClick={() => setSortType("armor")}>Sort by Armor</button>
     </div>
   );
 }
