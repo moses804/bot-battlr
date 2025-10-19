@@ -44,7 +44,7 @@ This project practices **React components, props, state, events, and data fetchi
 
 1. **Clone the repository**
 
-git clone <YOUR-PRIVATE-REPO-URL>
+git clone <git@github.com:moses804/bot-battlr.git>
 cd bot-battlr
 
 2. Install dependencies
